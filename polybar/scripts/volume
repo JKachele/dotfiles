@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+current=`pactl get-default-sink`
+# volume=`pactl list sinks | grep '^[[:space:]]Volume:' | head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,'`
+volume=`amixer sget Master | awk -F"[][]" '/Left:/ { print $2 }'`
+mute=`amixer sget Master | awk -F"[][]" '/Left:/ { print $4 }'`
+
+printVolume() {
+    if [[ $mute == "on" ]]; then
+        printf "%s\n" "$volume"
+    else
+        printf "󰝟\n"
+    fi
+}
+
+if [[ $current =~ .*pci.* ]]; then
+    printf "󰓃 "
+    printVolume
+else
+    printf "󰋋 "
+    printVolume
+fi
+
+# vim:ft=sh

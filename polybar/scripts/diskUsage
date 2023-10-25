@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+disks=`df -h`
+rootRegex=" \/$"
+
+readarray -t disks <<< "$disks"
+
+for disk in "${disks[@]}"; do
+    if [[ "$disk" =~ $rootRegex ]]; then
+        disk=`echo $disk`
+
+        readarray -d " " -t diskParts <<< "$disk"
+        printf "%s/%s\n" "${diskParts[2]}" "${diskParts[1]}"
+    fi
+done
+
+# vim:ft=sh

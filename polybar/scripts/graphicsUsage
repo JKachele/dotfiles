@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+######################################################################
+# @author      : Justin Kachele (justin@kachele.com)
+# @file        : temps
+# @created     : Monday Aug 07, 2023 20:58:38 EDT
+#
+# @description : 
+######################################################################
+
+gpu=`nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits`
+
+printf "%s%%\n" "$gpu"
