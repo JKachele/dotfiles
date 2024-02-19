@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+current=`pactl get-default-sink`
+
+# if [[ $current =~ .*pci.* ]]; then
+#     printf "󰓃 "
+# else
+#     printf "󰋋 "
+# fi
+
+if [[ $current =~ .*hdmi.* ]]; then
+    printf " "
+elif [[ $current =~ .*usb.* ]]; then
+    printf "󰋋 "
+else
+    printf "󰓃 "
+fi
+
+# vim:ft=sh

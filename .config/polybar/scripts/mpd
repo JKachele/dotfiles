@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+mpd=`mpc`
+readarray -t music <<< "$mpd"
+readarray -d " " -t pause <<< "${music[1]}"
+
+if [[ "${pause[0]}" != "[paused]" ]]; then
+    printf "%s\n" "${music[0]}"
+else
+    printf "Paused\n"
+fi
+
