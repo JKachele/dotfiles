@@ -20,10 +20,11 @@ pacman -S stow
 
 ## Installation
 
-First, check out the dotfiles repo in your $HOME directory using git
+First, check out the dotfiles repo in your $HOME directory using git<br>
+*Use the recurse-submodules flad to import all submodules*
 
 ```
-$ git clone git@github.com/dreamsofautonomy/dotfiles.git
+$ git clone git@github.com:JKachele/dotfiles.git --recurse-submodules
 $ cd dotfiles
 ```
 
