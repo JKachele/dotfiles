@@ -1,0 +1,38 @@
+# Avoid mistakes
+alias rm='rm -v'
+alias mv='mv -v'
+alias cp='cp -v'
+# Neovim
+alias v='nvim'
+alias vi='nvim'
+alias vim='nvim'
+# Enable aliases after sudo
+alias sudo='sudo '
+# List Files
+alias ll='ls -al --group-directories-first'
+alias lla='ls -l --group-directories-first'
+alias lf='lf-ueberzug'
+# Lazygit
+alias lgit='lazygit'
+alias lg='lazygit'
+# Always use python3
+alias py='python3'
+# mount/unmount
+alias unmt='unmount'
+# 3D Print Files
+alias stl='mv ~/Downloads/*.stl ~/Documents/3D_Print'
+alias 3mf='mv ~/Downloads/*.3mf ~/Documents/3D_Print'
+# Zathura PDF Reader
+alias z='zathura '
+# Open
+alias open='xdg-open'
+# Trash
+alias tr='trash-put '
+alias trr='trash-restore '
+# Move Minecraft Mods
+alias mods='mv -v ~/Downloads/*.jar ~/.minecraft/mods'
+# Helios Power Control
+alias helios-on='ipmitool -I lanplus -H 10.0.0.112 -U ADMIN -P Jfk82203! chassis power on'
+alias helios-off='ipmitool -I lanplus -H 10.0.0.112 -U ADMIN -P Jfk82203! chassis power soft'
+alias helios-forceoff='ipmitool -I lanplus -H 10.0.0.112 -U ADMIN -P Jfk82203! chassis power off'
+alias helios-cycle='ipmitool -I lanplus -H 10.0.0.112 -U ADMIN -P Jfk82203! chassis power cycle'
