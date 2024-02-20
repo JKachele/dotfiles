@@ -250,7 +250,7 @@ assign [class="LWJGL"] $ws10
 for_window [class="LWJGL"] focus
 
 # Open apps with shortcut
-bindsym $mod+Shift+b exec brave
+bindsym $mod+Shift+b exec firefox
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
