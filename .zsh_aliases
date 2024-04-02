@@ -1,5 +1,5 @@
+alias src='source ~/.zshrc'
 # Avoid mistakes
-alias rm='rm -v'
 alias mv='mv -v'
 alias cp='cp -v'
 # Neovim
@@ -36,3 +36,6 @@ alias helios-on='ipmitool -I lanplus -H 10.0.0.112 -U ADMIN -P Jfk82203! chassis
 alias helios-off='ipmitool -I lanplus -H 10.0.0.112 -U ADMIN -P Jfk82203! chassis power soft'
 alias helios-forceoff='ipmitool -I lanplus -H 10.0.0.112 -U ADMIN -P Jfk82203! chassis power off'
 alias helios-cycle='ipmitool -I lanplus -H 10.0.0.112 -U ADMIN -P Jfk82203! chassis power cycle'
+# Openvpn Aliases
+alias ovpn-aws-ohio='sudo openvpn --config ~/.openvpn/aws_ohio.ovpn --auth-user-pass ~/.openvpn/aws_ohio.auth'
+alias ovpn-htb-start1='sudo openvpn --config ~/.openvpn/starting_point_JKachele.ovpn'
