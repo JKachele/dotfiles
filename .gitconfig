@@ -1,0 +1,26 @@
+[user]
+	name = jkachele
+	email = justin@kachele.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOFXEnV2nO2GIts1fxVYmyPNHx2fXE5iJ8PM0wUU54aT
+[core]
+	autocrlf = input
+	editor = nvim
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+	gpgsign = true
+[pager]
+	reflog = false
+	branch = false
+[pull]
+	rebase = false
+[alias]
+	lg = !git --no-pager log --decorate=short --pretty=reference -n5
+	unstage = reset HEAD --
+	last = !git --no-pager log -1 HEAD
