@@ -70,7 +70,10 @@ ZSH_THEME="bira"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    # git-prompt
+)
 
 source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:~/bin
@@ -85,8 +88,8 @@ neofetch
 
 mkcd() { mkdir -p "$@" && cd "$@" ; }
 
-GIT_PROMPT_EXECUTABLE="haskell"
 source ~/zsh-git-prompt/zshrc.sh
+ZSH_THEME_GIT_PROMPT_PREFIX="("
 PROMPT='%F{yellow}╭─%f%F{blue}󰣇 [%f%n%F{red}@%f%m%F{blue}]%f %F{10}%~%f $(git_super_status)
 %F{yellow}╰─%f$ '
 

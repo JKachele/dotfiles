@@ -1,7 +1,5 @@
 # Avoid mistakes
-alias rm='rm -v'
 alias mv='mv -v'
-alias cp='cp -v'
 # Neovim
 alias v='nvim'
 alias vi='nvim'
@@ -11,7 +9,7 @@ alias sudo='sudo '
 # List Files
 alias ll='ls -al --group-directories-first'
 alias lla='ls -l --group-directories-first'
-alias lf='lf-ueberzug'
+# alias lf='lf-ueberzug'
 # Lazygit
 alias lgit='lazygit'
 alias lg='lazygit'
