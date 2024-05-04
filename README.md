@@ -6,17 +6,12 @@ This directory contains the dotfiles for my system
 
 Ensure you have the following installed on your system
 
-### Git
-
-```
-pacman -S git
-```
-
-### Stow
-
-```
-pacman -S stow
-```
+- Git
+- GNU Stow
+- zsh
+- zoxide
+- wget/curl
+- neofetch
 
 ## Installation
 
