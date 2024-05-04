@@ -85,7 +85,7 @@ neofetch
 
 mkcd() { mkdir -p "$@" && cd "$@" ; }
 
-GIT_PROMPT_EXECUTABLE="haskell"
+GIT_PROMPT_EXECUTABLE="python"
 source ~/zsh-git-prompt/zshrc.sh
 PROMPT='%F{yellow}╭─%f%F{blue}󰣇 [%f%n%F{red}@%f%m%F{blue}]%f %F{10}%~%f $(git_super_status)
 %F{yellow}╰─%f$ '

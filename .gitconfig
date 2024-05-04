@@ -21,6 +21,9 @@
 [pull]
 	rebase = false
 [alias]
-	lg = !git --no-pager log --decorate=short --pretty=reference -n5
+	lg = !git --no-pager log --oneline --decorate -n10
+	lga = !git --no-pager log --oneline --decorate
+	la = !git --no-pager log --oneline --decorate --graph --all -n10
+	laa = !git --no-pager log --oneline --decorate --graph --all
 	unstage = reset HEAD --
 	last = !git --no-pager log -1 HEAD
