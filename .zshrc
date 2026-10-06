@@ -89,7 +89,7 @@ fastfetch
 
 mkcd() { mkdir -p "$@" && cd "$@" ; }
 
-source ~/zsh-git-prompt/zshrc.sh
+source ~/dotfiles/zsh-git-prompt/zshrc.sh
 PROMPT='%F{yellow}╭─%f%F{blue}󰣇 [%f%n%F{red}@%f%m%F{blue}]%f %F{10}%~%f $(git_super_status)
 %F{yellow}╰─%f$ '
 
