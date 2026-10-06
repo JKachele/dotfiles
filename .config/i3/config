@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+# set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -221,16 +222,6 @@ bindsym $mod+Shift+F12                  move container to workspace $wsF12
 
 bindsym $mod+Shift+BackSpace            move container to workspace $wsTV
 
-# Assign Workspaces to Monitors
-workspace $ws0  output DP-4
-workspace $ws1  output DP-2
-workspace $ws9  output DP-4
-workspace $ws11 output DP-4
-workspace $ws2 output DP-0
-workspace $ws3 output DP-0
-workspace $wsTV output HDMI-0
-
-
 # assign apps with workspaces
 assign [class="libreoffice-startcenter"] $ws9
 for_window [class="libreoffice-startcenter"] focus
@@ -290,7 +281,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 exec_always --no-startup-id nitrogen --restore &
-exec_always --no-startup-id xrandr --output DP-0 --mode 3840x2160 --rate 60.00 --pos 8960x0 --rotate right --output DP-1 --off --output HDMI-0 --mode 3840x2160 --rate 60.00 --pos 0x840 --rotate normal --output DP-2 --mode 2560x1440 --rate 143.97 --pos 3840x1200 --rotate normal --output DP-3 --off --output HDMI-1 --off --output DP-4 --primary --mode 2560x1440 --rate 170.00 --pos 6400x1200 --rotate normal --output DP-5 --off
 
 set $bg-color 	         #000080
 set $inactive-bg-color   #2f343f
@@ -313,7 +303,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color			$ur
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 
 # Pulse Audio controls
-bindsym $mod+Shift+S exec ~/bin/switchAudioOutput
+# bindsym $mod+Shift+S exec ~/bin/switchAudioOutput
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound

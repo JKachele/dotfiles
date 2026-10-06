@@ -75,17 +75,20 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:~/bin
 export PATH=$PATH:~/bin/lf
+export PATH=$PATH:~/.local/bin
+export PATH=$PATH:/root/.local/bin
+export PATH=$PATH:/opt/riscv/bin
+export PATH=$PATH:~/.cargo/bin
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source ~/.zsh_aliases
 source ~/.zsh_icons
 
-neofetch
+fastfetch
 
 mkcd() { mkdir -p "$@" && cd "$@" ; }
 
-GIT_PROMPT_EXECUTABLE="haskell"
 source ~/zsh-git-prompt/zshrc.sh
 PROMPT='%F{yellow}╭─%f%F{blue}󰣇 [%f%n%F{red}@%f%m%F{blue}]%f %F{10}%~%f $(git_super_status)
 %F{yellow}╰─%f$ '
@@ -103,6 +106,7 @@ function precmd() {
     unset timer
   fi
 }
-eval "$(zoxide init --cmd cd zsh)"
-
-eval "$(atuin init zsh)"
+# eval "$(zoxide init --cmd cd zsh)"
+#
+# eval "$(atuin init zsh)"
+source /opt/Xilinx/2025.1/Vivado/settings64.sh

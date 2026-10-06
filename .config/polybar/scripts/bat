@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+
+percent=`acpi -b | awk -F"[, ]" '/Battery 1:/ { print $5 }'`
+if [ -z "${percent}" ]; then
+        percent=`acpi -b | awk -F"[, ]" '/Battery 1:/ { print $6 }'`
+fi;
+charge=`acpi -b | awk -F"[, ]" '/Battery 1:/ { print $3 }'`
+
+if [ -z "${charge}" ]; then
+    percent=`acpi -b | awk -F"[, ]" '/Battery 0:/ { print $5 }'`
+    if [ -z "${percent}" ]; then
+            percent=`acpi -b | awk -F"[, ]" '/Battery 0:/ { print $6 }'`
+    fi;
+    charge=`acpi -b | awk -F"[, ]" '/Battery 0:/ { print $3 }'`
+fi;
+
+charging=" "
+discharging=" "
+
+if [ "$charge" = "Discharging" ]; then
+    # echo $discharging $percent
+    echo $percent
+else
+    echo $charging $percent
+fi;
